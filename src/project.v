@@ -11,9 +11,9 @@ module tt_um_wokwi_408211710346159105(
   input  wire [7:0] uio_in,    // IOs: Input path
   output wire [7:0] uio_out,    // IOs: Output path
   output wire [7:0] uio_oe,    // IOs: Enable path (active high: 0=input, 1=output)
-  input ena,
-  input clk,
-  input rst_n
+  input  wire       ena,
+  input  wire       clk,
+  input  wire       rst_n
 );
   wire net1 = ui_in[0];
   wire net2;
