@@ -16,10 +16,9 @@ module tt_um_wokwi_408233560679352321(
   input rst_n
 );
   wire enable1 = ui_in[0];
-	wire _n1, _n2, _n3, _n4, _n5, _n6, _n7, _n8, _n9, _n10, _n11, _n12, _n13, _n14;
+  wire _n1, _n2, _n3, _n4, _n5, _n6, _n7, _n8, _n9, _n10, _n11, _n12, _n13, _n14;
 
-
-  assign uo_out[0] = osc_out;
+  assign uo_out[0] = 0;
   assign uo_out[1] = 0;
   assign uo_out[2] = 0;
   assign uo_out[3] = 0;
@@ -27,9 +26,9 @@ module tt_um_wokwi_408233560679352321(
   assign uo_out[5] = 0;
   assign uo_out[6] = 0;
   assign uo_out[7] = 0;
-  assign uio_out[0] = 0;
+  assign uio_out[0] = osc_out;
   assign uio_oe[0] = 0;
-  assign uio_out[1] = 0;
+  assign uio_out[1] =0;
   assign uio_oe[1] = 0;
   assign uio_out[2] = 0;
   assign uio_oe[2] = 0;
