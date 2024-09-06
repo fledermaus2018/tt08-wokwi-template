@@ -35,8 +35,6 @@ module tt_um_wokwi_408233560679352321(
   wire net18;
   wire net19;
   wire net20;
-  wire net21;
-  wire net22;
 
   assign uo_out[0] = net3;
   assign uo_out[1] = net4;
@@ -63,65 +61,59 @@ module tt_um_wokwi_408233560679352321(
   assign uio_out[7] = 0;
   assign uio_oe[7] = 0;
 
-  not_cell not117 (
-    .in (net11),
-    .out (net12)
-  );
-  not_cell not118 (
-    .in (net12),
-    .out (net13)
-  );
-  not_cell not119 (
-    .in (net13),
-    .out (net14)
-  );
-  not_cell not120 (
-    .in (net14),
-    .out (net15)
-  );
   nand_cell nand1 (
     .a (net1),
     .b (net2),
     .out (net11)
   );
   not_cell not129 (
-    .in (net15),
-    .out (net16)
+    .in (net12),
+    .out (net13)
   );
   not_cell not130 (
-    .in (net16),
-    .out (net17)
+    .in (net13),
+    .out (net14)
   );
   not_cell not131 (
-    .in (net17),
-    .out (net18)
+    .in (net14),
+    .out (net15)
   );
   not_cell not132 (
-    .in (net18),
+    .in (net15),
     .out (net3)
   );
   not_cell not133 (
-    .in (net17),
-    .out (net19)
+    .in (net14),
+    .out (net16)
   );
   not_cell not134 (
-    .in (net19),
-    .out (net20)
+    .in (net16),
+    .out (net17)
   );
   not_cell not135 (
-    .in (net17),
-    .out (net21)
+    .in (net14),
+    .out (net18)
   );
   not_cell not136 (
-    .in (net21),
+    .in (net18),
     .out (net5)
   );
   not_cell not137 (
-    .in (net20),
-    .out (net22)
+    .in (net17),
+    .out (net19)
   );
   not_cell not138 (
-    .in (net22),
+    .in (net19),
     .out (net4)
+  );
+  nand_cell nand2 (
+    .a (net11),
+    .b (net11),
+    .out (net20)
+  );
+  nand_cell nand3 (
+    .a (net20),
+    .b (net20),
+    .out (net12)
   );
 endmodule
