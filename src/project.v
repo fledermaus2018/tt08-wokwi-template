@@ -15,16 +15,16 @@ module tt_um_wokwi_408233560679352321(
   input clk,
   input rst_n
 );
-  wire net1 = ui_in[0];
-  wire net2;
+  wire net1 = clk;
+  wire net2 = ui_in[0];
   wire net3;
   wire net4;
-  wire net5 = 1'b1;
+  wire net5;
   wire net6 = 1'b1;
-  wire net7 = 1'b0;
-  wire net8 = 1'b1;
-  wire net9 = 1'b0;
-  wire net10;
+  wire net7 = 1'b1;
+  wire net8 = 1'b0;
+  wire net9 = 1'b1;
+  wire net10 = 1'b0;
   wire net11;
   wire net12;
   wire net13;
@@ -44,10 +44,11 @@ module tt_um_wokwi_408233560679352321(
   wire net27;
   wire net28;
   wire net29;
+  wire net30;
 
-  assign uo_out[0] = net2;
-  assign uo_out[1] = net3;
-  assign uo_out[2] = net4;
+  assign uo_out[0] = net3;
+  assign uo_out[1] = net4;
+  assign uo_out[2] = net5;
   assign uo_out[3] = 0;
   assign uo_out[4] = 0;
   assign uo_out[5] = 0;
@@ -71,88 +72,88 @@ module tt_um_wokwi_408233560679352321(
   assign uio_oe[7] = 0;
 
   not_cell not117 (
-    .in (net10),
-    .out (net11)
-  );
-  not_cell not118 (
     .in (net11),
     .out (net12)
   );
-  not_cell not119 (
+  not_cell not118 (
     .in (net12),
     .out (net13)
   );
-  not_cell not120 (
+  not_cell not119 (
     .in (net13),
     .out (net14)
   );
-  nand_cell nand1 (
-    .a (net14),
-    .b (net1),
-    .out (net10)
-  );
-  not_cell not129 (
+  not_cell not120 (
     .in (net14),
     .out (net15)
   );
-  not_cell not130 (
+  nand_cell nand1 (
+    .a (net1),
+    .b (net2),
+    .out (net11)
+  );
+  not_cell not129 (
     .in (net15),
     .out (net16)
   );
+  not_cell not130 (
+    .in (net16),
+    .out (net17)
+  );
   dff_cell flop1 (
-    .d (net17),
-    .clk (net16),
-    .q (net18),
-    .notq (net17)
+    .d (net18),
+    .clk (net17),
+    .q (net19),
+    .notq (net18)
   );
   not_cell not131 (
-    .in (net16),
-    .out (net19)
+    .in (net17),
+    .out (net20)
   );
   not_cell not132 (
-    .in (net19),
-    .out (net2)
+    .in (net20),
+    .out (net3)
   );
   dff_cell flop2 (
-    .d (net20),
-    .clk (net18),
-    .q (net21),
-    .notq (net20)
+    .d (net21),
+    .clk (net19),
+    .q (net22),
+    .notq (net21)
   );
   not_cell not133 (
-    .in (net21),
-    .out (net22)
-  );
-  not_cell not134 (
     .in (net22),
     .out (net23)
   );
+  not_cell not134 (
+    .in (net23),
+    .out (net24)
+  );
   dff_cell flop3 (
-    .d (net24),
-    .clk (net23),
-    .q (net25),
-    .notq (net24)
+    .d (net25),
+    .clk (net24),
+    .q (net26),
+    .notq (net25)
   );
   dff_cell flop4 (
-    .d (net26),
-    .clk (net25),
-    .q (net27),
-    .notq (net26)
+    .d (net27),
+    .clk (net26),
+    .q (net28),
+    .notq (net27)
   );
   not_cell not135 (
-    .in (net27),
-    .out (net28)
-  );
-  not_cell not136 (
     .in (net28),
-    .out (net4)
-  );
-  not_cell not137 (
-    .in (net23),
     .out (net29)
   );
-  not_cell not138 (
+  not_cell not136 (
     .in (net29),
-    .out (net3)
+    .out (net5)
+  );
+  not_cell not137 (
+    .in (net24),
+    .out (net30)
+  );
+  not_cell not138 (
+    .in (net30),
+    .out (net4)
   );
 endmodule
