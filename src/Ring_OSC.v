@@ -19,8 +19,6 @@ module RING_OSCILLATOR (
     output wire n12,
     output wire n13,
     output wire n14,
-    output wire n15
-
 );
   
 
