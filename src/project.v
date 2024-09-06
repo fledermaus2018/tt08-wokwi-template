@@ -15,7 +15,6 @@ module tt_um_wokwi_408233560679352321(
   input clk,
   input rst_n
 );
-  wire enable1 = ui_in[0];
   wire _n1, _n2, _n3, _n4, _n5, _n6, _n7, _n8, _n9, _n10, _n11, _n12, _n13, _n14;
 
   assign uo_out[0] = 0;
@@ -43,7 +42,7 @@ module tt_um_wokwi_408233560679352321(
   assign uio_oe[7] = 0;
 
  Rin_OSC ring_osc1 (
-        .en0(ebable1),
+        .en0(ui_in[0]),
 	.in(uio_out[0]),
         .out(uio_out[0]),
 	.n1(_n1),
