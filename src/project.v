@@ -26,7 +26,6 @@ module tt_um_wokwi_408233560679352321(
   assign uo_out[5] = 0;
   assign uo_out[6] = 0;
   assign uo_out[7] = 0;
-  assign uio_out[0] = osc_out;
   assign uio_oe[0] = 0;
   assign uio_out[1] =0;
   assign uio_oe[1] = 0;
@@ -45,8 +44,8 @@ module tt_um_wokwi_408233560679352321(
 
  Rin_OSC ring_osc1 (
         .en0(ebable1),
-        .in(osc_out),
-        .out(osc_out),
+	.in(uio_out[0]),
+        .out(uio_out[0]),
 	.n1(_n1),
 	.n2(_n2),
 	.n3(_n3),
