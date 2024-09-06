@@ -63,59 +63,15 @@ module tt_um_wokwi_408233560679352321(
   assign uio_out[7] = 0;
   assign uio_oe[7] = 0;
 
-  nand_cell nand1 (
-    .a (net1),
-    .b (net2),
-    .out (net13)
-  );
-  not_cell not129 (
-    .in (net14),
-    .out (net15)
-  );
-  not_cell not130 (
-    .in (net15),
-    .out (net16)
-  );
-  not_cell not131 (
-    .in (net16),
-    .out (net17)
-  );
-  not_cell not132 (
-    .in (net17),
-    .out (net5)
-  );
-  not_cell not133 (
-    .in (net16),
-    .out (net18)
-  );
-  not_cell not134 (
-    .in (net18),
-    .out (net19)
-  );
-  not_cell not135 (
-    .in (net16),
-    .out (net20)
-  );
-  not_cell not136 (
-    .in (net20),
-    .out (net7)
-  );
-  not_cell not137 (
-    .in (net19),
-    .out (net21)
-  );
-  not_cell not138 (
-    .in (net21),
-    .out (net6)
-  );
-  nand_cell nand2 (
-    .a (net13),
-    .b (net3),
-    .out (net22)
-  );
-  nand_cell nand3 (
-    .a (net22),
-    .b (net4),
-    .out (net14)
-  );
+ Rin_OSC ring_osc1 (
+        .en0(enable),
+        .en1(enable1),
+        .in(osc_out),
+        .out(osc_out),
+        .n1(n1),
+        .n2(n2),
+        .n3(n3),
+        .n4(n4)
+    );
+  
 endmodule
